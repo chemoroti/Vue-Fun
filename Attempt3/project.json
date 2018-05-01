@@ -1,8 +1,0 @@
-{
-    "scripts": {
-        "prepublish": [
-            "npm install",
-            "npm run build"
-        ]
-    }
-}

@@ -2,26 +2,21 @@
     <div>
         <h1>Companies</h1>
 
-        <p>A list of companies</p>
+        <v-data-table :headers="headers"
+                      :items="items"
+                      hide-actions
+                      class="elevation-1">
+            <template slot="items" scope="props">
+                <td>{{ props.item.id}}</td>
+                <td class="text-xs-right">{{ props.item.companyName }}</td>
+                <td class="text-xs-right">{{ props.item.address1 }}</td>
+                <td class="text-xs-right">{{ props.item.city }}</td>
+                <td class="text-xs-right">{{ props.item.state }}</td>
+                <td class="text-xs-right">{{ props.item.country }}</td>
+                <td class="text-xs-right">{{ props.item.companyUrl }}</td>
+            </template>
+        </v-data-table>
 
-        <table v-if="companies.length" class="table">
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Name</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr v-for="company in companies">
-                    <td>{{ company.id }}</td>
-                    <td>{{ company.name }}</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <p v-else>
-            <em>Loading...</em>
-        </p>
     </div>
 </template>
 

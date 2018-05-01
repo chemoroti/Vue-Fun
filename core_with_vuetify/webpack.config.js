@@ -5,7 +5,8 @@ const CheckerPlugin = require('awesome-typescript-loader').CheckerPlugin;
 const bundleOutputDir = './wwwroot/dist';
 
 module.exports = (env) => {
-    const isDevBuild = !(env && env.prod);
+    //const isDevBuild = !(env && env.prod);
+    const isDevBuild = true;
 
     return [{
         stats: { modules: false },

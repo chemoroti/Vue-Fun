@@ -1,0 +1,28 @@
+<template>
+    <div>
+        <h1>Companies</h1>
+
+        <p>A list of companies</p>
+
+        <table v-if="things.length" class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="thing in things">
+                    <td>{{ thing.Id }}</td>
+                    <td>{{ thing.Name }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <p v-else>
+            <em>Loading...</em>
+        </p>
+    </div>
+</template>
+
+<script src="./companies.ts"></script>

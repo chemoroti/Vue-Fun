@@ -13,19 +13,9 @@
             <div class="clearfix"></div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>
-                        <router-link to="/" :exact="true">
-                            <span class="glyphicon glyphicon-home"></span> Home
-                        </router-link>
-                    </li>
-                    <li>
-                        <router-link to="/counter">
-                            <span class="glyphicon glyphicon-education"></span> Counter
-                        </router-link>
-                    </li>
-                    <li>
-                        <router-link to="/fetchdata">
-                            <span class="glyphicon glyphicon-th-list"></span> Fetch data
+                    <li v-for="route in routes">
+                        <router-link :to="route.path" :exact="true">
+                            <span :class="route.style"></span> {{ route.display }}
                         </router-link>
                     </li>
                 </ul>
@@ -35,3 +25,4 @@
 </template>
 
 <style src="./navmenu.css" />
+<script src="./navmenu.ts"></script>

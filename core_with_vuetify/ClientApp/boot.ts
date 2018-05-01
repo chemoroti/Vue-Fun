@@ -9,7 +9,8 @@ Vue.use(Vuetify);
 const routes = [
     { path: '/', component: require('./components/home/home.vue.html') },
     { path: '/counter', component: require('./components/counter/counter.vue.html') },
-    { path: '/fetchdata', component: require('./components/fetchdata/fetchdata.vue.html') }
+    { path: '/fetchdata', component: require('./components/fetchdata/fetchdata.vue.html') },
+    { path: '/companies', component: require('./components/companies/companies.vue.html')}
 ];
 
 new Vue({

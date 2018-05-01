@@ -20,10 +20,10 @@
     "vuetify": "^0.17.6",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1",
-    "vue-loader": "^11.1.4",
-    "vue-property-decorator": "^5.0.1",
-    "vue-router": "^2.3.0",
-    "vue-template-compiler": "^2.2.2",
+    "vue-loader": "^15.0.5",
+    "vue-property-decorator":"^6.0.0",
+    "vue-router": "^3.0.1",
+    "vue-template-compiler": "^2.5.16",
     "webpack": "^2.2.0",
     "webpack-hot-middleware": "^2.12.2"
   }

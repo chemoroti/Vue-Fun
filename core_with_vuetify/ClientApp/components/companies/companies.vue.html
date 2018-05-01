@@ -4,7 +4,7 @@
 
         <p>A list of companies</p>
 
-        <table v-if="things.length" class="table">
+        <table v-if="companies.length" class="table">
             <thead>
                 <tr>
                     <th>Id</th>
@@ -12,9 +12,9 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="thing in things">
-                    <td>{{ thing.Id }}</td>
-                    <td>{{ thing.Name }}</td>
+                <tr v-for="company in companies">
+                    <td>{{ company.id }}</td>
+                    <td>{{ company.name }}</td>
                 </tr>
             </tbody>
         </table>

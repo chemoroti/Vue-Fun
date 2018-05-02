@@ -14,17 +14,21 @@ interface Company {
 @Component
 export default class CompaniesComponent extends Vue {
     items: Company[] = [];
-    totalItems: number = 0;
+    num1: number = 5;
+    num2: number = 6;
     mounted() {
         fetch('apiv1/Api/TopCompanies')
             .then(response => response.json() as Promise<Company[]>)
             .then(data => {
                 this.items = data;
-                this.totalItems = data.length;
             });
+    }
+    get num3() {
+        return this.num1 + this.num2;
     }
     data() {
         return {
+            //thing: this.methods.DoThing(),
             headers: [
                 {
                     text: "Id",
@@ -57,7 +61,6 @@ export default class CompaniesComponent extends Vue {
                     value: "companyUrl"
                 }
             ],
-            pagination: {},
         }
     }
 }

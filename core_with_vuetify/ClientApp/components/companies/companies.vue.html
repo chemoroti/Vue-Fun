@@ -1,12 +1,10 @@
 <template>
     <div>
         <h1>Companies</h1>
-
+        <h2>{{num3}}</h2>
         <v-data-table :headers="headers"
-                      :items="items"
-                      :total-items="totalItems"
-                      :pagination.sync="pagination"
-                      class="elevation-1">
+                    :items="items"
+                    class="elevation-1">
             <template slot="items" scope="props">
                 <td class="text-xs-right">{{ props.item.id}}</td>
                 <td class="text-xs-right">{{ props.item.companyName }}</td>

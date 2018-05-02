@@ -9,7 +9,13 @@
     "skipDefaultLibCheck": true,
     "strictFunctionTypes": false,
     "strict": true,
-    "types": ["webpack-env"]
+    "types": ["webpack-env"],
+    "lib": [
+      "es5",
+      "es2015",
+      "dom",
+      "scripthost"
+    ]
   },
   "exclude": [
       "bin",
